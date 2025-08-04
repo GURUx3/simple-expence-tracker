@@ -1,3 +1,4 @@
+// src/components/ExpenseTracker.tsx
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -34,7 +35,6 @@ const ExpenseTracker: React.FC = () => {
     setAmount(0);
   };
 
-  // Pie chart data showing each expense as a slice
   const chartData = {
     labels: dataa.map((item) => item.ename),
     datasets: [
@@ -54,7 +54,7 @@ const ExpenseTracker: React.FC = () => {
               "#B2FF59",
               "#FFD740",
               "#FF4081",
-            ][i % 10] // Reuse colors if more than 10 items
+            ][i % 10]
         ),
         borderColor: "#ffffff",
         borderWidth: 2,
